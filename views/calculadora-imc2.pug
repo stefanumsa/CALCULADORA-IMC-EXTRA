@@ -1,0 +1,25 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Calculadora IMC - Sistema Inglés
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    nav
+      ul
+        li
+          a(href='/') Pagina Principal
+        li
+          a(href='/calculadora-imc') Sistema Métrico
+        li
+          a(href='/informacion') Informacion
+    .container
+      h1 Calculadora de IMC (Sistema Inglés)
+    .index-container
+      form(action="/api/bmi" method="POST")
+        input(type="hidden" name="unit" value="ingles")
+        label(for="height") Altura (pulgadas):
+        input(type="number" name="height" required)
+        label(for="weight") Peso (libras):
+        input(type="number" name="weight" required)
+        button(type="submit" class="btn-return") Calcular IMC
