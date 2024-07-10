@@ -1,0 +1,25 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Resultado del IMC
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    nav
+      ul
+        li
+          a(href='/') Pagina Principal
+        li
+          a(href='/calculadora-imc') Sistema Métrico
+        li
+          a(href='/informacion') Informacion
+    .container
+      h1 Resultado del IMC:
+      .result
+        if imc
+          p Tu IMC es #{imc}
+          p #{message}
+        else
+          p No se pudo calcular el IMC.
+      .form-group
+        button(type="button" class="btn-return" onclick="window.location.href='/calculadora-imc2'") Volver a calcular el IMC

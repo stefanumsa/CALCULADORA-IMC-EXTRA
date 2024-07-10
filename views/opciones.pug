@@ -1,0 +1,30 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title STEFAN-EXTRA-
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    nav
+      ul
+        li
+          a(href='/') -Pagina Principal-
+        li
+          a(href='/informacion') -Informacion-
+
+  .index-container
+   form
+     div
+       h1 -Calculadora del Indice de Masa Corporal (IMC)-
+       p En esta pagina podras calcular el IMC (Indice de Masa Corporal).
+       p Por favor selecciona una de las siguientes opciones.
+
+
+       P -Para calcular el IMC por el Sistema Metrico por favor precione el siguiente boton:-
+       <div class="form-group">
+        <button type="button" class="btn-return" onclick="window.location.href='/calculadora-imc'"> -Sistema Metrico.- </button>
+        P -Para calcular el IMC por el Sistema Ingles por favor precione el siguiente boton:-
+        <button type="button" class="btn-return" onclick="window.location.href='/calculadora-imc2'"> -Sistema Ingles.- </button>
+      
+
+

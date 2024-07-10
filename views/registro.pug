@@ -1,0 +1,61 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title STEFAN-EXTRA-
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    nav
+      ul
+        li
+          a(href='/') -Inicio-
+        li
+          a(href='/login') -Iniciar Sesión-
+        
+        
+
+    .container
+    block content
+    h1(class='title') Registro
+  .registro-container
+    form(action='/registrar-usuario' method='POST' class='registro-form')
+      .form-group
+        label(for='nombre' class='form-label') Usuario
+        input(type='text' name='nombre' id='nombre' placeholder='Usuario' class='form-input', required)
+
+      .form-group
+        label(for='email' class='form-label') Email
+        input(type='email' name='email' id='email' placeholder='Correo electrónico' class='form-input', required)
+
+      .form-group
+        label(for='password' class='form-label') Contraseña
+        input(type='password' name='password' id='password' placeholder='Contraseña' class='form-input', required)
+        button(type='button' id='mostrarContrasena')
+          i(class='material-symbols-rounded') Mostrar 
+
+      .form-group
+        label(for='confirmPassword' class='form-label') Confirmar Contraseña
+        input(type='password' name='confirmPassword' id='confirmPassword' placeholder='Confirmar contraseña' class='form-input', required)
+
+
+      .form-group
+        button(type='submit' class='submit-button') Registrarse
+
+    //- Script para mostrar y ocultar contraseña 
+    script.
+      const passwordInput = document.getElementById('password');
+      const mostrarContrasenaBtn = document.getElementById('mostrarContrasena');
+
+      mostrarContrasenaBtn.addEventListener('click', () => {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            mostrarContrasenaBtn.innerHTML = '<i class="material-symbols-rounded">Ocultar</i>';
+        } else {
+            passwordInput.type = 'password';
+            mostrarContrasenaBtn.innerHTML = '<i class="material-symbols-rounded">Mostrar</i>';
+        }
+      });
+
+    
+
+    

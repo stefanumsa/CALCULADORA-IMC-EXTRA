@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title STEFAN-EXTRA-
+    link(rel="stylesheet", href="/css/style.css")
+    
+  body
+    nav
+      ul 
+        li
+          a(href='/login') -Iniciar Sesión-
+        li
+          a(href='/registro') -Registrarse-
+        li 
+          .toggle-switch
+            input(type="checkbox" id="toggle-dark-mode")
+            a(for="toggle-dark-mode") -Modo Oscuro-
+    
+   
+    .container
+      block content
+
+    script.
+      const toggleSwitch = document.querySelector('.toggle-switch input[type="checkbox"]');
+      toggleSwitch.addEventListener('change', function() {
+          if (this.checked) {
+              document.body.classList.add('dark-mode');
+          } else {
+              document.body.classList.remove('dark-mode');
+          }
+      });
+    script(src='/javascripts/script.js')
+
+ 
+
